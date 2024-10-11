@@ -1,0 +1,201 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Modern font for better readability */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background color for the body */
+    color: #333; /* Dark text color */
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 20px auto; /* Center the container */
+    background: #fff; /* White background for the container */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Main Content Styles */
+.main-content {
+    text-align: center; /* Center align the text */
+}
+
+.main-content h1 {
+    margin: 20px 0; /* Space above and below the main title */
+    color: #007bff; /* Use primary color for title */
+}
+
+/* Home Button Styles */
+.home-button {
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    margin-bottom: 20px; /* Space below the button */
+}
+
+.home-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight scale up effect */
+}
+
+/* Student Data Section */
+.student-data {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of student cards */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards in the container */
+}
+
+/* Student Card Styles */
+.student-card {
+    background: #fff; /* White background for each card */
+    border: 2px solid #007bff; /* Blue border for the card */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    flex: 1 1 calc(30% - 20px); /* Responsive width for cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+    position: relative; /* For the gradient effect */
+    overflow: hidden; /* Prevent overflow from the gradient */
+}
+
+/* Add a background gradient effect on the card */
+.student-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.1); /* Light blue background for the gradient */
+    z-index: 0; /* Place behind the content */
+    border-radius: 10px; /* Match the card's corners */
+}
+
+/* Student Card Hover Effects */
+.student-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Student Card Text */
+.student-card h3 {
+    margin: 0 0 10px; /* Space below student name */
+    color: #333; /* Dark color for name */
+    z-index: 1; /* Place above the gradient */
+    position: relative; /* Position relative to the parent */
+}
+
+.student-card p {
+    margin: 5px 0; /* Space between details */
+    font-size: 14px; /* Font size for details */
+    z-index: 1; /* Place above the gradient */
+    position: relative; /* Position relative to the parent */
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+.edit-button, .delete-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    z-index: 10; /* Add this line */
+    position: relative; /* Ensure the buttons are positioned correctly */
+}
+
+/* .edit-button:hover {
+    background-color: #0056b3;
+} */
+
+.delete-button {
+    background-color: #dc3545; /* Red for delete */
+}
+
+/* .delete-button:hover {
+    background-color: #c82333;
+} */
+/* Form container styling */
+form {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+form label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Input fields styling */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Input focus state */
+form input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit button styling */
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: -4px;
+    margin-bottom: 20px;
+}
+
+/* Submit button hover effect */
+form button:hover {
+    background-color: #0056b3;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .student-card {
+        flex: 1 1 calc(45% - 20px); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .student-card {
+        flex: 1 1 100%; /* One card per row on extra small screens */
+    }
+}
